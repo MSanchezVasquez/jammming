@@ -10,6 +10,8 @@ function App() {
   const [cancion, setCancion] = useState("");
   const [canciones, setCanciones] = useState([]);
   const [playList, setPlaylist] = useState([]);
+  const [currentPreview, setCurrentPreview] = useState(null); // URL activa
+  const [audio, setAudio] = useState(null); // Objeto Audio en reproducción
 
   const addToPlaylist = (track) => {
     if (!playList.find((t) => t.id === track.id)) {
@@ -23,6 +25,22 @@ function App() {
 
   const handleClearPlaylist = () => {
     setPlaylist([]);
+  };
+
+  const handlePreview = (url) => {
+    if (audio) {
+      audio.pause();
+      setAudio(null);
+      if (currentPreview === url) {
+        setCurrentPreview(null);
+        return;
+      }
+    }
+
+    const newAudio = new Audio(url);
+    newAudio.play();
+    setAudio(newAudio);
+    setCurrentPreview(url);
   };
 
   const handleSearch = (e) => {
@@ -80,12 +98,16 @@ function App() {
             canciones={canciones}
             terminoBusqueda={ultimaBusqueda}
             onAdd={addToPlaylist}
+            handlePreview={handlePreview}
+            currentPreview={currentPreview}
           />
           {playList.length > 0 && (
             <Playlist
               canciones={playList}
               onRemove={removeFromPlaylist}
               onClear={handleClearPlaylist}
+              handlePreview={handlePreview}
+              currentPreview={currentPreview}
             />
           )}
         </div>

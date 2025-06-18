@@ -3,7 +3,14 @@ import { FaCirclePlay } from "react-icons/fa6";
 import { IoAdd } from "react-icons/io5";
 import { IoRemove } from "react-icons/io5";
 
-const Track = ({ track, onAdd, onRemove, isRemovable }) => {
+const Track = ({
+  track,
+  onAdd,
+  onRemove,
+  isRemovable,
+  handlePreview,
+  currentPreview,
+}) => {
   const artistas = track.artists.items
     .map((artista) => artista.profile.name)
     .join(", ");
@@ -46,6 +53,14 @@ const Track = ({ track, onAdd, onRemove, isRemovable }) => {
           </button>
         )}
       </div>
+      {track.preview_url && (
+        <button
+          className="preview-button"
+          onClick={() => handlePreview(track.preview_url)}
+        >
+          {currentPreview === track.preview_url ? "⏸️" : "▶️"}
+        </button>
+      )}
     </div>
   );
 };

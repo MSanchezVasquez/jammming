@@ -1,7 +1,14 @@
 import "./Tracklist.css";
 import Track from "./Track";
 
-const TrackList = ({ canciones, onAdd, onRemove, isRemovable = false }) => {
+const TrackList = ({
+  canciones,
+  onAdd,
+  onRemove,
+  isRemovable = false,
+  handlePreview,
+  currentPreview,
+}) => {
   return (
     <div className="container-tracks">
       {canciones.map((cancion) => {
@@ -19,6 +26,8 @@ const TrackList = ({ canciones, onAdd, onRemove, isRemovable = false }) => {
               onAdd={onAdd}
               onRemove={onRemove}
               isRemovable={isRemovable}
+              handlePreview={handlePreview}
+              currentPreview={currentPreview}
             />
           </div>
         );

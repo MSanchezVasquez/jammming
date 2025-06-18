@@ -4,7 +4,13 @@ import { useState } from "react";
 import { LiaTrashAlt } from "react-icons/lia";
 import Spotify from "../utils/Spotify";
 
-const Playlist = ({ canciones, onRemove, onClear }) => {
+const Playlist = ({
+  canciones,
+  onRemove,
+  onClear,
+  handlePreview,
+  currentPreview,
+}) => {
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [isEditing, setIsEditing] = useState(false);
 

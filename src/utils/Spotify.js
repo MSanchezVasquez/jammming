@@ -76,6 +76,7 @@ const Spotify = {
       alert(`✅ ¡Playlist "${name}" guardada exitosamente en Spotify!`);
     } catch (error) {
       console.error("Error al guardar en Spotify:", error);
+      console.log("TOKEN ACTUAL:", Spotify.getAccessToken());
       alert("❌ Hubo un error al guardar la playlist.");
     }
   },

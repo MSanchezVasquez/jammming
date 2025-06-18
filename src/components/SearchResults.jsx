@@ -1,7 +1,13 @@
 import TrackList from "./TrackList";
 import "./SearchResults.css";
 
-const SearchResults = ({ canciones, terminoBusqueda, onAdd }) => {
+const SearchResults = ({
+  canciones,
+  terminoBusqueda,
+  onAdd,
+  handlePreview,
+  currentPreview,
+}) => {
   return (
     <div className="container-results">
       {}
@@ -14,7 +20,12 @@ const SearchResults = ({ canciones, terminoBusqueda, onAdd }) => {
         <h2 className="title">Results...</h2>
       )}
 
-      <TrackList canciones={canciones} onAdd={onAdd} />
+      <TrackList
+        canciones={canciones}
+        onAdd={onAdd}
+        handlePreview={handlePreview}
+        currentPreview={currentPreview}
+      />
     </div>
   );
 };
