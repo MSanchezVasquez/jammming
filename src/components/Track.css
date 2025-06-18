@@ -1,0 +1,84 @@
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.track img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.track img:hover {
+  transform: scale(1.03);
+}
+
+.track h2,
+.track p {
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.track h2 {
+  font-size: 1rem;
+}
+
+.track p {
+  font-size: 0.9rem;
+}
+
+.botones {
+  display: flex;
+  gap: 6px;
+}
+
+.button-play {
+  background-color: #2612ae;
+  border: none;
+  color: #ededed;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button-play:hover {
+  background-color: #371ddd;
+}
+
+.button-add-playlist,
+.button-remove-playlist {
+  background-color: #558c45;
+  border: none;
+  color: #ededed;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button-add-playlist {
+  background-color: #558c45;
+}
+.button-remove-playlist {
+  background-color: #861d1d;
+}

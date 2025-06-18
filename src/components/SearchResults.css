@@ -1,0 +1,13 @@
+.container-results {
+  background-color: #302d2d87;
+  max-width: 60vw;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+.title-results {
+  font-size: 1.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,15 @@
+.title-app {
+  font-size: 4rem;
+  text-align: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.mmm {
+  color: #dfaa17;
+}
+
+.container-results-and-playlist {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,38 @@
+.container-tracks {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1660px) {
+  .container-tracks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1250px) {
+  .container-tracks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 785px) {
+  .container-tracks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 376px) {
+  .container-tracks {
+    gap: 0;
+  }
+}

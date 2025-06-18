@@ -1,0 +1,39 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+}
+label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+input {
+  padding: 7px;
+  border-radius: 0.4rem;
+  border: none;
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease;
+}
+input:focus {
+  background-color: rgb(29, 27, 27);
+  color: white;
+  font-weight: 700;
+}
+
+.button-search {
+  margin-top: 0.5rem;
+}
+
+.button-search button {
+  cursor: pointer;
+  padding: 14px 1.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  background-color: #531c1c;
+  color: #ededed;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.5s ease;
+}
