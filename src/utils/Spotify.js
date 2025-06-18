@@ -2,7 +2,7 @@ let accessToken;
 let expiresIn;
 
 const clientId = "528f7c6ba17a4adf9147a4d6a0013a11";
-const redirectUri = "https://localhost:3000";
+const redirectUri = "https://app-jammming.netlify.app";
 const scopes = "playlist-modify-public";
 
 const Spotify = {
